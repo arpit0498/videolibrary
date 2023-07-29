@@ -17,11 +17,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/:videoCategory" element={<VideoListing />} />
-        <Route path="/watch-later" element={<WatchLater />} />
+
         <Route path="/video/:videoTitle" element={<VideoDetail />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/playlist" element={<Playlists />} />
         <Route path="/playlist/:playlistId" element={<PlaylistMusicVideos />} />
+        <Route path="/watch-later" element={<WatchLater />} />
       </Routes>
     </div>
   );
