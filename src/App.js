@@ -1,25 +1,26 @@
-import { Route, Routes, useLocation } from "react-router-dom";
-import "./App.css";
-import Home from "./pages/home/home";
-import WatchLater from "./pages/watchLater/watchLater"
-import Playlist from "./pages/playlist/playlist"
-import PlaylistVideo from "./pages/playlistVideo/playlistVideo"
-import SingleVideo from "./pages/singleVideo/singleVideo"
+import { Routes, Route } from "react-router-dom";
+import { LeftSidebar } from "./component/LeftSidebar/LeftSidebar";
+import { Homepage } from "./pages/Homepage/Homepage";
+import { VideoListing } from "./pages/VideoListing/VideoListing";
+import { WatchLater } from "./pages/WatchLater/WatchLater";
+import { VideoDetail } from "./pages/VideoDetail/VideoDetail";
+import { Explore } from "./pages/Explore/Explore";
+import { Playlists } from "./pages/Playlists/Playlists";
+import { PlaylistMusicVideos } from "./pages/PlaylistMusicVideos/PlaylistMusicVideos";
 
 
 function App() {
-
   return (
-    <div className="App">
-
+    <div className="main-container">
+      <LeftSidebar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/:videoCategory" element={<VideoListing />} />
         <Route path="/watch-later" element={<WatchLater />} />
-        <Route path="/playlist" element={<Playlist />} />
-        <Route path="/playlist/:playlistId" element={<PlaylistVideo />} />
-        <Route path="/watch/:videoId" element={<SingleVideo />} />
-
-
+        <Route path="/video/:videoTitle" element={<VideoDetail />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/playlist" element={<Playlists />} />
+        <Route path="/playlist/:playlistId" element={<PlaylistMusicVideos />} />
       </Routes>
     </div>
   );
