@@ -7,7 +7,7 @@ import { VideoDetail } from "./pages/VideoDetail/VideoDetail";
 import { Explore } from "./pages/Explore/Explore";
 import { Playlists } from "./pages/Playlists/Playlists";
 import { PlaylistMusicVideos } from "./pages/PlaylistMusicVideos/PlaylistMusicVideos";
-import { WatchLater } from "./pages/WatchLater/WatchLater";
+// import { WatchLater } from "./pages/WatchLater/WatchLater";
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/playlist" element={<Playlists />} />
         <Route path="/playlist/:playlistId" element={<PlaylistMusicVideos />} />
-        <Route path="/watch-later" element={<WatchLater />} />
+        {/* <Route path="/watch-later" element={<WatchLater />} /> */}
       </Routes>
     </div>
   );
