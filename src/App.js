@@ -21,7 +21,7 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/playlist" element={<Playlists />} />
         <Route path="/playlist/:playlistId" element={<PlaylistMusicVideos />} />
-        {/* <Route path="/watch-later" element={<WatchLater />} /> */}
+        <Route path="/watch-later" element={<WatchLater />} />
       </Routes>
     </div>
   );
